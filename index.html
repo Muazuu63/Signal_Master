@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body>
   <div class="bg-grid"></div>
@@ -26,6 +26,10 @@
     </header>
 
     <section class="panel">
+      <label class="field-label" for="marketSearch">SEARCH MARKET</label>
+      <div class="search-wrap">
+        <input id="marketSearch" class="search-input" type="search" placeholder="Search pair..." autocomplete="off" />
+      </div>
       <label class="field-label">SELECT MARKET</label>
       <button class="market-btn" id="marketBtn" type="button">
         <span id="marketValue">USD/BRL (OTC)</span>
@@ -37,6 +41,7 @@
           <span>SELECT MARKET</span>
           <span id="marketCount">41</span>
         </div>
+        <p class="market-empty hidden" id="marketEmpty">No market found</p>
         <div class="market-list" id="marketList"></div>
       </div>
 
@@ -102,6 +107,6 @@
     <button class="btn-again" id="btnAgain" type="button">SCAN AGAIN</button>
   </div>
 
-  <script src="js/app.js?v=7"></script>
+  <script src="js/app.js?v=9"></script>
 </body>
 </html>
