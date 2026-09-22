@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>SIGNAL MASTER - Live Market Scanner</title>
+  <meta name="theme-color" content="#070b14">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=5">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+
+  <div class="app">
+    <header class="header">
+      <div class="live-pill">
+        <span class="live-dot"></span>
+        LIVE
+      </div>
+      <h1>SIGNAL MASTER</h1>
+      <p class="subtitle">LIVE MARKET SCANNER</p>
+      <div class="clock" id="clock">--:--:--</div>
+    </header>
+
+    <section class="panel">
+      <label class="field-label">SELECT MARKET</label>
+      <button class="market-btn" id="marketBtn" type="button">
+        <span id="marketValue">USD/BRL (OTC)</span>
+        <span class="select-chevron"></span>
+      </button>
+      <select id="market" hidden></select>
+      <div class="market-sheet" id="marketSheet">
+        <div class="market-sheet-head">
+          <span>SELECT MARKET</span>
+          <span id="marketCount">41</span>
+        </div>
+        <div class="market-list" id="marketList"></div>
+      </div>
+
+      <button class="btn-scan" id="btnScan" type="button">SCAN</button>
+      <p class="tap-label" id="tapLabel">TAP TO SCAN</p>
+    </section>
+
+    <section class="scan-stage" id="scanStage">
+      <button class="radar" id="radar" type="button" aria-label="Tap to scan">
+        <span class="radar-ring r1"></span>
+        <span class="radar-ring r2"></span>
+        <span class="radar-ring r3"></span>
+        <span class="radar-sweep"></span>
+        <span class="radar-cross-h"></span>
+        <span class="radar-cross-v"></span>
+        <span class="radar-core">
+          <svg viewBox="0 0 64 64" width="42" height="42" aria-hidden="true">
+            <path d="M8 40c8-16 40-16 48 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M16 36c6-10 26-10 32 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M24 32c4-6 12-6 16 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="32" cy="44" r="4" fill="currentColor"/>
+          </svg>
+        </span>
+      </button>
+      <p class="hint" id="hint">Tap the logo to scan</p>
+    </section>
+
+    <section class="result hidden" id="result">
+      <p class="scan-done" id="scanDone">Scan completed Entry +1 minute</p>
+      <h2>LIVE MARKET ANALYSIS</h2>
+      <div class="analysis">
+        <div class="row">
+          <span>Market</span>
+          <strong id="resMarket">--</strong>
+        </div>
+        <div class="row">
+          <span>Entry Time</span>
+          <strong id="resEntry">--:--</strong>
+        </div>
+        <div class="row">
+          <span>Expiry</span>
+          <strong>1 Candle (M1)</strong>
+        </div>
+        <div class="row">
+          <span>Trend</span>
+          <strong id="resTrend" class="trend">--</strong>
+        </div>
+        <div class="row signal-row">
+          <span>Signal</span>
+          <strong id="resSignal" class="signal">--</strong>
+        </div>
+        <div class="row">
+          <span>Countdown</span>
+          <strong id="resCount">--</strong>
+        </div>
+      </div>
+      <p class="advice" id="advice">
+        <span class="tri">▲</span>
+        You should enter trades. using proper management, risking 1% of your balance.
+      </p>
+    </section>
+
+    <button class="btn-again" id="btnAgain" type="button">SCAN AGAIN</button>
+  </div>
+
+  <script src="js/app.js?v=7"></script>
+</body>
+</html>

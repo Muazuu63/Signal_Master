@@ -1,0 +1,41 @@
+SIGNAL MASTER - XAMPP LIVE SETUP
+================================
+
+1. XAMPP Control Panel khule Apache Start koro.
+   MySQL lagbe na.
+
+2. Ei folder er file gulo copy koro:
+
+   C:\xampp\htdocs\signal-master\
+
+   Copy list:
+   - index.html
+   - .htaccess
+   - css\style.css
+   - js\app.js
+   - api\candles.php
+
+3. Browser e khulo:
+
+   http://localhost/signal-master/
+
+4. Live signal check:
+
+   http://localhost/signal-master/api/candles.php?symbol=EURUSD=X
+
+   JSON asle live feed thik ase. SCAN dile 1-minute candle theke UP/DOWN ashbe.
+
+Jodi live data na ashe
+----------------------
+- PC te internet on thakte hobe
+- php.ini te allow_url_fopen = On
+- extension=curl uncomment thakte hobe
+- Apache Restart koro
+
+Jodi dropdown/page style na ashe
+--------------------------------
+folder name thik koro: htdocs\signal-master
+css ar js folder soho copy koro.
+
+Python server.py XAMPP e lagbe na.
+XAMPP Apache + PHP e live API cholbe.
